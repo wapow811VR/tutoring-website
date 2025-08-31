@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tutoring</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/booking.js"></script>
+
+</head>
+<body>
+  <h1>Book a Tutoring Session</h1>
+  <p>Select your preferred day, start time, and duration.</p>
+
+  <form id="booking-form">
+    <label for="day">Day:</label>
+    <select id="day" required></select>
+
+    <label for="start-time">Start Time:</label>
+    <select id="start-time" required></select>
+
+    <label for="duration">Duration:</label>
+    <select id="duration" required>
+      <option value="30">30 min</option>
+      <option value="60">1 hour</option>
+      <option value="90">1.5 hours</option>
+    </select>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="notes">Notes:</label>
+    <textarea id="notes"></textarea>
+
+    <button type="submit">Book Now</button>
+  </form>
+
+  <div id="message"></div>
+</body>
+</html>
